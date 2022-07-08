@@ -5,7 +5,7 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 
-model = pickle.load(open('../MODEL/model.pkl', 'rb'))
+model = pickle.load(open('./model.pkl', 'rb'))
 
 
 @app.route('/')
