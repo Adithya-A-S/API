@@ -8,11 +8,20 @@ app = Flask(__name__)
 model = pickle.load(open('./model.pkl', 'rb'))
 
 
-@app.route('/')
+@app.route('/welcome')
 @cross_origin()
 def home():
     return {"data": "Welcome to online diabetes prediction model"}
+@app.route('/')
+@cross_origin()
+def homepage():
+    the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
+    return """
+    <h1>Hello heroku</h1>
+    <p>It is currently {time}.</p>
+    <img src="http://loremflickr.com/600/400" />
+    """.format(time=the_time)
 
 @app.route('/prediction', methods=['POST'])
 @cross_origin()
