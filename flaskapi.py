@@ -15,13 +15,12 @@ def home():
 @app.route('/')
 @cross_origin()
 def homepage():
-    the_time = datetime.now().strftime("%A, %d %b %Y %l:%M %p")
 
     return """
-    <h1>Hello heroku</h1>
-    <p>It is currently {time}.</p>
-    <img src="http://loremflickr.com/600/400" />
-    """.format(time=the_time)
+    <h1>Diabetes Prediction API</h1>
+    <p1>By Adithya A S</p1>
+    <img src="https://media.giphy.com/media/J1RWP1OyfkwATrL9cd/giphy.gif"/>
+    """
 
 @app.route('/prediction', methods=['POST'])
 @cross_origin()
