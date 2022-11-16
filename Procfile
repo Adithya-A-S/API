@@ -1,1 +1,1 @@
-web: uvicorn flaskapi:app --host 0.0.0.0 --port $PORT
+web: uvicorn tempapi:app --host 0.0.0.0 --port $PORT
