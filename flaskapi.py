@@ -6,7 +6,7 @@ from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
 
-model = pickle.load(open('./model.pkl', 'rb'))
+model = pickle.load(open('./modell.pkl', 'rb'))
 
 
 @app.route('/', methods=['GET'])
@@ -36,5 +36,8 @@ def predict():
         }
     }
     return jsonify(output)
+
+if __name__ == "__main__":
+    app.run(debug=True)
 
 
