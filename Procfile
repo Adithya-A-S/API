@@ -1,1 +1,1 @@
-web: uvicorn main:flaskapi --host 0.0.0.0 --port $PORT
+web: uvicorn flaskapi:app --host 0.0.0.0 --port $PORT
