@@ -5,6 +5,4 @@ gunicorn
 flask
 fastapi
 uvicorn
-pydantic
-pickle5
-scikit-learn
+
