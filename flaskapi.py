@@ -1,6 +1,7 @@
-import numpy as np
-from flask import Flask, request, jsonify
 import pickle
+
+import numpy as np
+from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
