@@ -8,11 +8,11 @@ app = Flask(__name__)
 model = pickle.load(open('./model.pkl', 'rb'))
 
 
-@app.route('/welcome', methods=['GET'])
+@app.route('/', methods=['GET'])
 @cross_origin()
 def home():
     return {"data": "Welcome to online diabetes prediction model"}
-@app.route('/', methods=['GET'])
+@app.route('/welcome', methods=['GET'])
 @cross_origin()
 def homepage():
 
