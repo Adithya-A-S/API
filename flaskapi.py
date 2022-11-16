@@ -24,7 +24,7 @@ def homepage():
     """
 
 @app.route('/prediction', methods=['POST'])
-@cross_origin()
+#@cross_origin()
 def predict():
     payload = request.get_json(force=True)
     prediction = model.predict([np.array(list(payload.values())+[0.3])]).tolist()[0]
